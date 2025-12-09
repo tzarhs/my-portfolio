@@ -46,7 +46,9 @@ function Hero() {
         </div>
 
         <button
-          onClick={() => window.scrollBy(0, 1000)}
+          onClick={() =>
+            window.scrollBy({ top: 1000, left: 0, behavior: "smooth" })
+          }
           class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white  hover:bg-lime-500 py-2 px-4 rounded-full duration-300"
         >
           &#8595;
