@@ -24,7 +24,7 @@ export default function About() {
     <section className="about-section relative bg-black h-screen flex items-center px-8">
       <div>
         <h1
-          className={`text-white text-6xl font-mono text-left p-4 leading-none transition-all duration-1000 ${
+          className={`text-white text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-mono text-left p-4 leading-none transition-all duration-1000 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-full"
@@ -33,7 +33,7 @@ export default function About() {
           ABOUT ME
         </h1>
         <p
-          className={`text-white text-2xl font-mono text-left p-4 -mt-6 transition-all duration-1000 delay-300 ${
+          className={`text-white sm:text-base md:text-lg lg:text-2xl font-mono text-left p-4 -mt-6 transition-all duration-1000 delay-300 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-full"

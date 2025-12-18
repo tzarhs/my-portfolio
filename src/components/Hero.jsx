@@ -13,46 +13,51 @@ function Hero() {
   return (
     <>
       <Navbar />
-      <section class="h-full bg-black flex items-center justify-between px-8">
-        <div class="w-1/2">
+      <section className="min-h-screen bg-black flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-8">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1
-            class={`text-white text-[100px] font-mono text-left p-4 leading-none transition-all duration-1000 ${
-              isVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-full"
-            }`}
+            className={`text-white font-mono leading-none transition-all duration-1000
+        text-4xl sm:text-5xl md:text-6xl lg:text-[100px]
+        ${
+          isVisible
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-full"
+        }
+      `}
           >
             Hi, I am
             <br />
             Giannis Tzaris.
           </h1>
+
           <h2
-            class={`text-white text-[35px] font-mono text-left p-4 -mt-6 transition-all duration-1000 delay-300 ${
-              isVisible
-                ? "opacity-100 translate-x-0"
-                : "opacity-0 -translate-x-full"
-            }`}
+            className={`text-white font-mono mt-4 transition-all duration-1000 delay-300
+        text-lg sm:text-xl md:text-2xl lg:text-[35px]
+        ${
+          isVisible
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 -translate-x-full"
+        }
+      `}
           >
-            Software Developer
+            Aspiring Software Developer
           </h2>
         </div>
 
-        <div class="w-1/2 flex justify-center">
+        {/* RIGHT: Image */}
+        <div className="w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0">
           <img
             src={heroImg}
             alt="Giannis Tzaris"
-            class="h-[500px] w-[500px] rounded-full object-cover"
+            className="
+        rounded-full object-cover
+        h-60 w-60
+        sm:h-72 sm:w-72
+        md:h-80 md:w-80
+        lg:h-[500px] lg:w-[500px]
+      "
           />
         </div>
-
-        {/* <button
-          onClick={() =>
-            window.scrollBy({ top: 1000, left: 0, behavior: "smooth" })
-          }
-          class="absolute bottom-10 left-1/2 transform -translate-x-1/2 bg-white  hover:bg-lime-500 py-2 px-4 rounded-full duration-300"
-        >
-          &#8595;
-        </button> */}
       </section>
     </>
   );
