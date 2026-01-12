@@ -1,16 +1,41 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website! This site showcases my projects, skills, and experience in software development, with a focus on full-stack web development.
 
-Currently, two official plugins are available:
+## 1. Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. **Project Showcase**  
+   - Highlight of personal and collaborative projects with descriptions, technologies used, and links to live demos and source code.  
 
-## React Compiler
+2. **About Me**  
+   - Brief introduction including background, education, and areas of expertise.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. **Contact**  
+   - Simple form for visitors to reach out via email.  
 
-## Expanding the ESLint configuration
+4. **Responsive Design**  
+   - Mobile-friendly layout that adapts to all screen sizes.  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 2. Projects Featured
+
+1. **E-Commerce Website**  
+   - Currently developing an e-commerce platform in collaboration with two team members.  
+
+2. **Full-Stack Blog Application**  
+   - Built with Node.js, Express, and MongoDB, featuring full CRUD functionality for blog posts.  
+
+3. **Feedback Collection Platform**  
+   - Full-stack web application allowing authenticated users to send mass emails and collect structured feedback.  
+   - Built with React, Redux, Node.js, and MongoDB as part of an advanced training course.  
+
+## 3. Technologies Used
+
+- **Frontend:** React, Redux, HTML5, CSS3, Tailwind CSS
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB  
+- **Other Tools:** Git, GitHub, VS Code
+
+## 4. Deployment
+
+This portfolio is deployed using Render for live hosting.
+
