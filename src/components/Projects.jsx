@@ -47,7 +47,13 @@ export default function Projects() {
       </div>
       {/* First Project */}
       <div className="flex flex-col-reverse lg:flex-row items-center gap-8 p-12">
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+        <div
+          className={`w-full lg:w-1/2 flex justify-center lg:justify-start transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <div className="bg-gray-500 rounded-2xl p-4 shadow-md">
             <img
               src={EmailyImg}
@@ -56,18 +62,22 @@ export default function Projects() {
             />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0">
+        <div
+          className={`w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0 transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold underline">
             Emaily
           </h1>
 
-          <p className="text-sm sm:text-base md:text-lg lg:text-lg">
-            In this project , I developed a full-stack web application feedback
-            collection platform <br />
-            that allows authenticated users to send mass emails to lists of
-            recipients and
-            <br /> collect structured feedback. Built as part of an advanced
-            training course in React, Redux, Node, and MongoDB.
+          <p className="text-justify max-w-prose text-sm sm:text-base md:text-lg lg:text-lg">
+            A full-stack feedback collection platform that allows authenticated
+            users to send bulk emails to recipient lists and collect structured
+            feedback, developed as part of advanced training in React, Redux,
+            Node.js, and MongoDB.
           </p>
 
           <div className="flex gap-4 flex-wrap">
@@ -79,7 +89,7 @@ export default function Projects() {
               GitHub <FaGithub className="ml-1" />
             </a>
             <a
-              href="https:/emaily-npo8.onrender.com/"
+              href="https://emaily-npo8.onrender.com"
               target="_blank"
               className="text-lime-400 underline hover:text-lime-300 transition"
             >
@@ -90,7 +100,13 @@ export default function Projects() {
       </div>
       "{/* Second Project */}
       <div className="flex flex-col-reverse lg:flex-row items-center gap-8 p-12">
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+        <div
+          className={`w-full lg:w-1/2 flex justify-center lg:justify-start transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <div className="bg-gray-500 rounded-2xl p-4 shadow-md">
             <img
               src={BlogImg}
@@ -100,13 +116,19 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0">
+        <div
+          className={`w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0 transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold underline">
             My-Blog
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-lg">
-            A full-stack blog application built with Node.js, Express, and
-            MongoDB that allows users to create, read, update, and delete blog
+          <p className="text-sm text-justify max-w-prose sm:text-base md:text-lg lg:text-lg">
+            A full-stack blog application developed with Node.js, Express, and
+            MongoDB, enabling users to create, read, update, and delete blog
             posts.
           </p>
 
@@ -123,7 +145,13 @@ export default function Projects() {
       </div>
       {/* Third Project */}
       <div className="flex flex-col-reverse lg:flex-row items-center gap-8 p-12">
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+        <div
+          className={`w-full lg:w-1/2 flex justify-center lg:justify-start transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <div className="bg-gray-500 rounded-2xl p-4 shadow-md">
             <img
               src={ECommerceImg}
@@ -133,12 +161,19 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0">
+        <div
+          className={`w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0 transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold underline">
             E-Commerce
           </h1>
-          <p className="text-sm sm:text-base md:text-lg lg:text-lg">
-            Currently working on an E-Commerce website with 2 of my friends.
+          <p className="text-sm text-justify max-w-prose sm:text-base md:text-lg lg:text-lg">
+            I am currently working with two collaborators on the development of
+            a modern e-commerce website.
           </p>
 
           <div className="flex gap-4 flex-wrap">

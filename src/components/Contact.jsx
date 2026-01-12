@@ -33,7 +33,7 @@ export default function Contact() {
     <section className="contact-section relative bg-black min-h-screen flex flex-col justify-center items-center px-8">
       <div className="flex flex-col items-start gap-4">
         <h1
-          className={`text-white text-6xl font-mono text-left leading-none transition-all duration-1000 ${
+          className={`text-white text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-mono text-left leading-none transition-opacity duration-1000 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-full"
@@ -44,7 +44,7 @@ export default function Contact() {
 
         <div className="flex flex-col items-start">
           <h4
-            className={`text-white text-lg font-mono text-left transition-all duration-1000 delay-300 ${
+            className={`text-white text-base sm:text-sm md:text-md lg:text-lg font-mono text-left transition-opacity duration-1000 delay-300 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-full"
@@ -62,7 +62,7 @@ export default function Contact() {
 
           {/* Toast — real layout element */}
           <div
-            className={`text-sm font-mono bg-lime-400 text-black px-3 py-1 rounded-md mt-1 transition-all duration-300 ${
+            className={`text-sm font-mono bg-lime-400 text-black px-3 py-1 rounded-md mt-1 transition-opacity duration-300 ${
               copied
                 ? "opacity-100 max-h-10 translate-y-0"
                 : "opacity-0 max-h-0 -translate-y-1 overflow-hidden"
@@ -72,7 +72,13 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+        <div
+          className={`flex items-center gap-4 transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <a href="https://github.com/tzarhs" target="_blank" rel="noreferrer">
             <FaGithub className="text-lime-500 text-3xl hover:scale-110 transition-transform" />
           </a>

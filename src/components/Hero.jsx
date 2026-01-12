@@ -13,7 +13,7 @@ function Hero() {
   return (
     <>
       <Navbar />
-      <section className="min-h-screen bg-black flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-8">
+      <section className="hero-section min-h-screen bg-black flex flex-col lg:flex-row items-center justify-center lg:justify-between px-6 lg:px-8">
         <div className="w-full lg:w-1/2 text-center lg:text-left">
           <h1
             className={`text-white font-mono leading-none transition-all duration-1000
@@ -44,8 +44,13 @@ function Hero() {
           </h2>
         </div>
 
-        {/* RIGHT: Image */}
-        <div className="w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0">
+        <div
+          className={`w-full lg:w-1/2 flex justify-center mt-10 lg:mt-0 transition-opacity duration-1000 delay-300 ${
+            isVisible
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 -translate-x-full"
+          }`}
+        >
           <img
             src={heroImg}
             alt="Giannis Tzaris"
