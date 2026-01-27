@@ -17,7 +17,7 @@ export default function Projects() {
           setIsVisible(true);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     observer.observe(projectsSection);
@@ -139,6 +139,13 @@ export default function Projects() {
               className="text-lime-400 hover:text-lime-300 transition underline inline-flex items-center"
             >
               GitHub <FaGithub className="ml-1" />
+            </a>
+            <a
+              href="https://my-blog-five-gamma-46.vercel.app/"
+              target="_blank"
+              className="text-lime-400 underline hover:text-lime-300 transition"
+            >
+              Live Demo &#x2197;
             </a>
           </div>
         </div>
