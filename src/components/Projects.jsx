@@ -3,6 +3,13 @@ import EmailyImg from "../assets/Emaily.png";
 import BlogImg from "../assets/Blog.png";
 import ECommerceImg from "../assets/ECommerce.png";
 import { FaGithub } from "react-icons/fa";
+import cartImg from "../assets/Cart.png";
+import checkoutImg from "../assets/Checkout.png";
+import homeImg from "../assets/Home.png";
+import stripeImg from "../assets/Stripe.png";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+const images = [homeImg, cartImg, checkoutImg, stripeImg];
 
 export default function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,6 +30,18 @@ export default function Projects() {
     observer.observe(projectsSection);
     return () => observer.disconnect();
   }, []);
+
+  // Image slider
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   return (
     <div className="projects-section bg-black min-h-screen flex flex-col px-8">
       <div>
@@ -58,7 +77,7 @@ export default function Projects() {
             <img
               src={EmailyImg}
               alt="emaily"
-              className="w-[600px] h-auto rounded-lg"
+              className="w-full max-w-[700px] h-auto rounded-lg"
             />
           </div>
         </div>
@@ -111,7 +130,7 @@ export default function Projects() {
             <img
               src={BlogImg}
               alt="blog"
-              className="w-[600px] h-auto rounded-lg"
+              className="w-full max-w-[700px] h-auto rounded-lg"
             />
           </div>
         </div>
@@ -159,30 +178,42 @@ export default function Projects() {
               : "opacity-0 -translate-x-full"
           }`}
         >
-          <div className="bg-gray-500 rounded-2xl p-4 shadow-md">
+          <div className="relative bg-gray-500 rounded-2xl p-4 shadow-md">
             <img
-              src={ECommerceImg}
+              src={images[currentIndex]}
               alt="ecommerce"
-              className="w-[600px] h-auto rounded-lg"
+              className="w-full max-w-[700px] h-auto rounded-lg transition-all duration-500"
             />
+
+            {/* Left Arrow */}
+            <button
+              onClick={prevSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition"
+            >
+              <FaChevronLeft />
+            </button>
+
+            {/* Right Arrow */}
+            <button
+              onClick={nextSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 hover:bg-black/80 text-white p-2 rounded-full transition"
+            >
+              <FaChevronRight />
+            </button>
           </div>
         </div>
-
         <div
-          className={`w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0 transition-opacity duration-1000 delay-300 ${
-            isVisible
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 -translate-x-full"
-          }`}
+          className={`w-full lg:w-1/2 flex flex-col gap-4 text-white text-left mt-4 lg:mt-0 transition-opacity duration-1000 delay-300 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-full"}`}
         >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold underline">
             E-Commerce
           </h1>
           <p className="text-sm text-justify max-w-prose sm:text-base md:text-lg lg:text-lg">
-            I am currently working with two collaborators on the development of
-            a modern e-commerce website.
+            I am currently working as part of a team on the development of a
+            modern e-commerce website. My contributions include designing and
+            implementing the Home page, Cart, and Checkout features, as well as
+            integrating Stripe for secure online payments.{" "}
           </p>
-
           <div className="flex gap-4 flex-wrap">
             <a
               href="https://github.com/Stamkopoulos/e-commerce"
