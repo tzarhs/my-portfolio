@@ -222,6 +222,13 @@ export default function Projects() {
             >
               GitHub <FaGithub className="ml-1" />
             </a>
+            <a
+              href="https://qloset-smoky.vercel.app/"
+              target="_blank"
+              className="text-lime-400 underline hover:text-lime-300 transition"
+            >
+              Live Demo &#x2197;
+            </a>
           </div>
         </div>
       </div>
