@@ -209,10 +209,12 @@ export default function Projects() {
             E-Commerce
           </h1>
           <p className="text-sm text-justify max-w-prose sm:text-base md:text-lg lg:text-lg">
-            I am currently working as part of a team on the development of a
-            modern e-commerce website. My contributions include designing and
-            implementing the Home page, Cart, and Checkout features, as well as
-            integrating Stripe for secure online payments.{" "}
+            Collaborated with a development team to build a modern e-commerce
+            platform, owning the design and development of the Home page, Cart,
+            and Checkout flows. Implemented secure payment processing via Stripe
+            integration, built user authentication and account management using
+            Clerk, and enabled multilingual support through i18next-based
+            internationalization.{" "}
           </p>
           <div className="flex gap-4 flex-wrap">
             <a
